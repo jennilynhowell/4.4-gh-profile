@@ -18,7 +18,7 @@
   mainNode.appendChild(repoNode);
 
 
-  if (GIT_TOKEN) {
+  // if (GIT_TOKEN) {
     //set AJAX header to send token
     headers['Authorization'] = 'token ' + GIT_TOKEN;
 
@@ -69,7 +69,7 @@
         };
       })
     })
-  }
+  // }
 
   //Create HTML structure for sidebar
 
