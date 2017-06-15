@@ -53,14 +53,19 @@
         for (let i = 0; i < data.length; i++) {
           let repoName = data[i].name;
           console.log(repoName);
+          let repoLink = data[i].html_url;
+          console.log(repoLink);
           let repoDesc = data[i].description;
           console.log(repoDesc);
           let repoLang = data[i].language;
+            if (data[i].language === null){
+              repoLang = 'language';
+            };
           console.log(repoLang);
           let repoUpdate = data[i].updated_at;
           console.log(repoUpdate);
 
-          buildRepoSection(repoName, repoDesc, repoLang, repoUpdate);
+          buildRepoSection(repoName, repoLink, repoDesc, repoLang, repoUpdate);
         };
       })
     })
@@ -85,13 +90,18 @@
     sidebarNode.appendChild(bioDiv);
     bioDiv.textContent = bio;
 
-    let locDiv = document.createElement('h5');
+    let locDiv = document.createElement('div');
     locDiv.setAttribute('id', 'locDiv');
+    let locIcon = document.createElement('span');
+    let locText = document.createElement('p');
+    locIcon.setAttribute('class', 'octicon octicon-location');
     sidebarNode.appendChild(locDiv);
-    locDiv.textContent = loc;
+    locDiv.appendChild(locIcon);
+    locDiv.appendChild(locText);
+    locText.textContent = loc;
 
     let emailDiv = document.createElement('p');
-    locDiv.setAttribute('id', 'emailDiv');
+    emailDiv.setAttribute('id', 'emailDiv');
     sidebarNode.appendChild(emailDiv);
     emailDiv.textContent = email;
 
@@ -104,14 +114,14 @@
 
   //Create HTML structure for repo section
 
-  function buildRepoSection (name, desc, lang, updated){
+  function buildRepoSection (name, link, desc, lang, updated){
     let repoBox = document.createElement('div');
     repoBox.setAttribute('class', 'repoBox');
     repoNode.appendChild(repoBox);
 
     let repoTitle = document.createElement('h1');
     repoTitle.setAttribute('class', 'repoTitle');
-    repoTitle.textContent = name;
+    repoTitle.innerHTML = '<a href="' + link + '">' + name + '</a>';
     repoBox.appendChild(repoTitle);
 
     let repoDesc = document.createElement('p');
@@ -121,7 +131,8 @@
 
     let repoLang = document.createElement('div');
     repoLang.setAttribute('class', 'repoLang');
-    repoLang.innerHTML = '<a>' + lang + '</a>';
+    lang = lang.toLowerCase();
+    repoLang.innerHTML = '<a href="#">' + lang + '</a>';
     repoBox.appendChild(repoLang);
 
     let repoUpdate = document.createElement('p');

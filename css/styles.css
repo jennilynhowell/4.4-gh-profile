@@ -1,33 +1,143 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  font-family: Helvetica, sans-serif;
 }
 
 header {
+  margin: 0;
   background-color: #000;
   color: #fff;
-  height: 50px;
+  height: 60px;
   width: 100%;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
 }
 
 header div {
   display: inline-block;
   color: #fff;
+  height: 100%;
+}
+
+.icon {
+  width: 50px;
+  padding-top: 10px;
+}
+
+#ghLogo {
+  height: 100%;
+  width: 100%;
+}
+
+.octicon-mark-github {
+  font-size: 2.5rem;
+}
+
+#searchInput {
+  padding-top: 10px;
+  padding-left: 8px;
+  width: 200px;
+  height: 80%;
+  background-color: #3F4448;
+  border: none;
+}
+
+nav {
+  flex: 1 1 40%;
+  width: 100px;
+}
+
+ul {
+  list-style: none;
 }
 
 li {
-  display: inline-block;
+  display: inline;
+  padding: 10px;
 }
 
 li a {
-  color: #fff;
+  color: #C8C9CB;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.addNew a {
+  color: #C8C9CB;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding-top: 12px;
+  margin-right: 10px;
+}
+
+.avatar {
+  padding-top: 5px;
+  padding-right: 10px;
+  height: 80%;
+  width: 50px;
+}
+
+.avatar img {
+  width: 100%;
 }
 
 aside {
+  display: inline-block;
   float: left;
-  margin-top: 75px;
-  width: 200px;
+  margin-top: 50px;
+  margin-left: 25px;
+  width: 35vw;
   height: 100%;
+}
+
+#photoDiv {
+  width: 100%;
+}
+
+#photoDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+#nameDiv {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid gray;
+}
+
+#locDiv p {
+  display: inline;
+  padding-left: 5px;
+}
+
+section {
+  display: inline-block;
+  float: right;
+  margin-top: 75px;
+  margin-right: 25px;
+  padding-left: 15px;
+  width: 55vw;
+  height: 100%;
+}
+
+.repoBox {
+  border-bottom: 1px solid gray;
+}
+
+.repoTitle {
+  color: #0366D5;
+  font-size: 25px;
+}
+
+.repoLang {
+  display: inline;
+  padding: 8px;
+  font-size: 0.8rem;
+  background-color: #F1F8FF;
+  color: #0366D5;
 }
