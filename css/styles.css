@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  height: 50px;
+  width: 100%;
+}
+
+header div {
+  display: inline-block;
+  color: #fff;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+aside {
+  float: left;
+  margin-top: 75px;
+  width: 200px;
+  height: 100%;
+}
