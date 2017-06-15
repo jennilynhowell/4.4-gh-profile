@@ -20,7 +20,11 @@
 
   // if (GIT_TOKEN) {
     //set AJAX header to send token
+    try {
     headers['Authorization'] = 'token ' + GIT_TOKEN;
+  } catch (e) {
+    //ignore error
+  }
 
     fetch(urlUser, {headers: headers}).then(function(response) {
       response.json().then(function(data){
