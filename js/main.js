@@ -19,13 +19,13 @@
   mainNode.appendChild(repoNode);
 
 
-  // if (GIT_TOKEN) {
-      // set AJAX header to send token
-      try {
-      headers['Authorization'] = 'token ' + GIT_TOKEN;
-    } catch (e) {
-      //ignore error
-    }
+  // // if (GIT_TOKEN) {
+  //     // set AJAX header to send token
+  //     try {
+  //     headers['Authorization'] = 'token ' + GIT_TOKEN;
+  //   } catch (e) {
+  //     //ignore error
+  //   }
 
     // fetch(urlOrgs, {headers: headers}).then(function(response) {
     //   response.json().then(function(data){
