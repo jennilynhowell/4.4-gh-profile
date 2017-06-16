@@ -1,4 +1,83 @@
-* {
+body {
+  padding-top: 70px;
+}
+
+
+.navbar {
+  background-color: #24292E;
+  padding: 0px 5% 0px 5%;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  font-size: 3rem;
+  padding-bottom: 10px;
+  margin-top: -4px;
+}
+
+#ghLogo {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar-form .form-control {
+  background-color: #3F4448;
+  border-color: #3F4448;
+  width: 300px;
+}
+
+.navbar-nav li a {
+  color: #C8C9CB;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.addNew {
+  display: inline;
+}
+
+.addNew a {
+  color: #C8C9CB;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding-top: 12px;
+  margin-right: 10px;
+}
+
+#avatar {
+  height: 45px;
+}
+
+#photoDiv {
+  height: 20%;
+  width: 100%;
+}
+
+.subheadForm {
+  border-bottom: 1px solid #E1E4E8;
+  padding: 5%;
+}
+
+#subheadSearchField {
+  width: 25%;
+}
+
+.repoBox {
+  border-bottom: 1px solid #E1E4E8;
+}
+
+.repoTitle {
+  color: #035EC4;
+}
+
+/*#photoDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}*/
+
+
+/** {
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
 }
@@ -140,4 +219,4 @@ section {
   font-size: 0.8rem;
   background-color: #F1F8FF;
   color: #0366D5;
-}
+}*/

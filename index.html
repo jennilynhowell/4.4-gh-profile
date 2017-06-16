@@ -3,33 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>Recreate GitHub Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/3.0.1/css/primer.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
 
-    <header>
-      <div class="icon"><span class="octicon octicon-mark-github"></span></div>
-      <div class="search"><input type="text" name="search" value="" id="searchInput" placeholder="Search GitHub"></div>
-      <nav>
-        <ul>
-          <li><a href="#">Pull Requests</a></li>
-          <li><a href="#">Issues</a></li>
-          <li><a href="#">Marketplace</a></li>
-          <li><a href="#">Gist</a></li>
-        </ul>
-      </nav>
-      <div class="addNew"><a href="#">+</a></div>
-      <div class="avatar"><img src="https://avatars2.githubusercontent.com/u/24422942?v=3" alt=""></div>
-    </header>
+  <body class="container-fluid">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
 
-    <main id="mainSection">
+        <div class="navbar-header">
+          <span class="navbar-brand octicon octicon-mark-github" href="#"></span>
+        </div>
+
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search GitHub">
+          </div>
+        </form>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="#">Pull Requests</a></li>
+            <li><a href="#">Issues</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Gist</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">+</a></li>
+            <li><img id="avatar" class="img-rounded"  src="https://avatars2.githubusercontent.com/u/24422942?v=3" alt=""></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <main id="mainSection" class="container-fluid">
+
 
     </main>
 
 
-    <script src="js/token.js" charset="utf-8"></script>
+    <!-- <script src="js/token.js" charset="utf-8"></script> -->
     <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
