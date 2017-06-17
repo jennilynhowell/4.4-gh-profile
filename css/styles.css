@@ -55,40 +55,59 @@ p {
   height: 45px;
 }
 
-#photoDiv {
+
+
+
+/*====================SIDEBAR*/
+.photoDiv {
+  display: inline-block;
   width: 100%;
+  height: 200px;
 }
 
 .nameDiv {
-  margin-top: 170px;
+  margin-top: 245px;
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #eaecef;
 }
 
+.contactDiv {
+  padding: 24px, 0px, 24px, 0px;
+  border-top: 1px solid #E1E4E8;
+  border-bottom: 1px solid #E1E4E8;
+}
+
+.locDiv, .emailDiv, .webDiv {
+  padding: 5px 5px 5px 0px;
+}
+
 .locDiv {
-  padding-top: 10px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eaecef;
+  padding-top: 15px;
 }
 
-.locDiv p {
+.contactDiv p {
   display: inline;
-  padding-left: 8px;
+  padding-left: 5px;
 }
 
-.webDiv {
-  padding-top: 10px;
-  padding-bottom: 20px;
+.webDiv a {
+  display: inline-block;
+  padding-left: 5px;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.orgsDiv h5 {
-  font-size: 16px;
-  font-weight: bold;
-}
 
+
+
+
+/*====================SUBHEADER*/
 .subheadList {
-  padding-top: 50px;
+  margin-bottom: 0;
+  padding-top: 20px;
   padding-left: 20px;
 }
 
@@ -116,7 +135,9 @@ p {
 }
 
 .subheadForm {
+  border-top: 1px solid #E1E4E8;
   border-bottom: 1px solid #E1E4E8;
+  padding-top: 20px;
   padding-left: 20px;
 }
 
@@ -149,14 +170,16 @@ p {
   color: #fff;
 }
 
+
+
+
+
+
+/*====================REPOS*/
 .repoBox {
-  padding: 24px, 0px, 24px, 0px;
   border-bottom: 1px solid #E1E4E8;
 }
 
-.repoLangDiv {
-  margin: 10px 0px;
-}
 
 .repoColor {
   display: inline-block;
@@ -167,159 +190,3 @@ p {
   border-radius: 50%;
   border: 1px solid transparent;
 }
-
-
-
-
-
-
-/*#photoDiv img {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-}*/
-
-
-/** {
-  box-sizing: border-box;
-  font-family: Helvetica, sans-serif;
-}
-
-header {
-  margin: 0;
-  background-color: #000;
-  color: #fff;
-  height: 60px;
-  width: 100%;
-  text-align: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-}
-
-header div {
-  display: inline-block;
-  color: #fff;
-  height: 100%;
-}
-
-.icon {
-  width: 50px;
-  padding-top: 10px;
-}
-
-#ghLogo {
-  height: 100%;
-  width: 100%;
-}
-
-.octicon-mark-github {
-  font-size: 2.5rem;
-}
-
-#searchInput {
-  padding-top: 10px;
-  padding-left: 8px;
-  width: 200px;
-  height: 80%;
-  background-color: #3F4448;
-  border: none;
-}
-
-nav {
-  flex: 1 1 40%;
-  width: 100px;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  display: inline;
-  padding: 10px;
-}
-
-li a {
-  color: #C8C9CB;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.addNew a {
-  color: #C8C9CB;
-  text-decoration: none;
-  font-size: 1.5rem;
-  padding-top: 12px;
-  margin-right: 10px;
-}
-
-.avatar {
-  padding-top: 5px;
-  padding-right: 10px;
-  height: 80%;
-  width: 50px;
-}
-
-.avatar img {
-  width: 100%;
-}
-
-aside {
-  display: inline-block;
-  float: left;
-  margin-top: 50px;
-  margin-left: 25px;
-  width: 35vw;
-  height: 100%;
-}
-
-#photoDiv {
-  width: 100%;
-}
-
-#photoDiv img {
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-}
-
-#nameDiv {
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid gray;
-}
-
-#locDiv p {
-  display: inline;
-  padding-left: 5px;
-}
-
-section {
-  display: inline-block;
-  float: right;
-  margin-top: 75px;
-  margin-right: 25px;
-  padding-left: 15px;
-  width: 55vw;
-  height: 100%;
-}
-
-.repoBox {
-  border-bottom: 1px solid gray;
-}
-
-.repoTitle {
-  color: #0366D5;
-  font-size: 25px;
-}
-
-.repoLang {
-  display: inline;
-  padding: 8px;
-  font-size: 0.8rem;
-  background-color: #F1F8FF;
-  color: #0366D5;
-}*/

@@ -27,16 +27,6 @@
   //     //ignore error
   //   }
 
-    // fetch(urlOrgs, {headers: headers}).then(function(response) {
-    //   response.json().then(function(data){
-    //       console.log(data);
-    //
-    //       let orgs = '';
-    //     })
-    //
-    //   })
-    // }
-
     fetch(urlUser, {headers: headers}).then(function(response) {
       response.json().then(function(data){
           console.log(data);
@@ -106,34 +96,27 @@
     sidebarNode.appendChild(bioDiv);
     bioDiv.textContent = bio;
 
-    let locDiv = document.createElement('div');
-    locDiv.setAttribute('class', 'locDiv');
-    let locIcon = document.createElement('span');
-    let locText = document.createElement('p');
-    locIcon.setAttribute('class', 'octicon octicon-location');
-    sidebarNode.appendChild(locDiv);
-    locDiv.appendChild(locIcon);
-    locDiv.appendChild(locText);
-    locText.textContent = loc;
+    let contactDiv = document.createElement('div');
+    contactDiv.setAttribute('class', 'contactDiv');
+    sidebarNode.appendChild(contactDiv);
+    let contactList = document.createElement('ul');
+    contactList.setAttribute('class', 'list-unstyled');
+    contactDiv.appendChild(contactList);
 
-    let emailDiv = document.createElement('p');
-    emailDiv.setAttribute('class', 'emailDiv');
-    sidebarNode.appendChild(emailDiv);
-    emailDiv.textContent = email;
+      let locDiv = document.createElement('li');
+      locDiv.setAttribute('class', 'locDiv');
+      locDiv.innerHTML = `<span class="octicon octicon-location"></span><p>${loc}</p>`;
+      contactList.appendChild(locDiv);
 
-    let webDiv = document.createElement('div');
-    webDiv.setAttribute('class', 'webDiv');
-    sidebarNode.appendChild(webDiv);
-    webDiv.innerHTML = `<a href="${web}">https://github.com/jennilynhowell</a>`;
+      let emailDiv = document.createElement('li');
+      emailDiv.setAttribute('class', 'emailDiv');
+      emailDiv.innerHTML = `<span class="glyphicon glyphicon-envelope"></span></span><p>${email}</p>`;
+      contactList.appendChild(emailDiv);
 
-    let orgsDiv = document.createElement('div');
-    orgsDiv.setAttribute('class', 'orgsDiv');
-    sidebarNode.appendChild(orgsDiv);
-    let orgsHead = document.createElement('h5');
-    let orgsLinks = document.createElement('span');
-    orgsDiv.appendChild(orgsHead);
-    orgsDiv.appendChild(orgsLinks);
-    orgsHead.textContent = 'Organizations';
+      let webDiv = document.createElement('li');
+      webDiv.setAttribute('class', 'webDiv');
+      webDiv.innerHTML = `<span class="glyphicon glyphicon-link"></span><a href="${web}">https://medium.com/@jennilynhowell</a>`;
+      contactList.appendChild(webDiv);
 
   }
 
