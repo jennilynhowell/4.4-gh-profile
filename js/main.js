@@ -91,22 +91,23 @@
   function buildSidebar(name, bio, loc, email, photo, web) {
 
     let photoDiv = document.createElement('div');
-    photoDiv.setAttribute('id', 'photoDiv col-md-3');
+    photoDiv.setAttribute('class', 'photoDiv col-md-3');
+    photoDiv.setAttribute('id', 'photoDiv');
     sidebarNode.appendChild(photoDiv);
     photoDiv.innerHTML = '<img class="img-rounded img-responsive" src="' + photo + '">';
 
-    let nameDiv = document.createElement('h1');
-    nameDiv.setAttribute('id', 'nameDiv col-md-3');
+    let nameDiv = document.createElement('h3');
+    nameDiv.setAttribute('class', 'nameDiv');
     sidebarNode.appendChild(nameDiv);
     nameDiv.textContent = name;
 
     let bioDiv = document.createElement('p');
-    bioDiv.setAttribute('id', 'bioDiv col-md-3');
+    bioDiv.setAttribute('class', 'bioDiv');
     sidebarNode.appendChild(bioDiv);
     bioDiv.textContent = bio;
 
     let locDiv = document.createElement('div');
-    locDiv.setAttribute('id', 'locDiv col-md-3');
+    locDiv.setAttribute('class', 'locDiv');
     let locIcon = document.createElement('span');
     let locText = document.createElement('p');
     locIcon.setAttribute('class', 'octicon octicon-location');
@@ -116,17 +117,17 @@
     locText.textContent = loc;
 
     let emailDiv = document.createElement('p');
-    emailDiv.setAttribute('id', 'emailDiv col-md-4');
+    emailDiv.setAttribute('class', 'emailDiv');
     sidebarNode.appendChild(emailDiv);
     emailDiv.textContent = email;
 
     let webDiv = document.createElement('div');
-    webDiv.setAttribute('id', 'webDiv col-md-4');
+    webDiv.setAttribute('class', 'webDiv');
     sidebarNode.appendChild(webDiv);
-    webDiv.textContent = web;
+    webDiv.innerHTML = `<a href="${web}">https://github.com/jennilynhowell</a>`;
 
     let orgsDiv = document.createElement('div');
-    orgsDiv.setAttribute('id', 'orgsDiv col-md-4');
+    orgsDiv.setAttribute('class', 'orgsDiv');
     sidebarNode.appendChild(orgsDiv);
     let orgsHead = document.createElement('h5');
     let orgsLinks = document.createElement('span');
@@ -146,11 +147,11 @@
     subheadList.setAttribute('class', 'subheadList list-unstyled list-inline');
     subHeader.appendChild(subheadList);
     subheadList.innerHTML = `
-                            <li><a href="#">Overview</a></li>
-                            <li><a href="${repos}">Repositories</a><span>${numRepos}</span></li>
-                            <li><a href="${stars}">Stars</a></li>
-                            <li><a href="${followers}">Followers</a><span>${numFollowers}</span></li>
-                            <li><a href="${following}">Following</a><span>${numFollowing}</span></li>
+                            <li class="profileNav"><a href="#">Overview</a></li>
+                            <li class="profileNav"><a href="${repos}">Repositories</a><span>${numRepos}</span></li>
+                            <li class="profileNav"><a href="${stars}">Stars</a><span>7</span></li>
+                            <li class="profileNav"><a href="${followers}">Followers</a><span>${numFollowers}</span></li>
+                            <li class="profileNav"><a href="${following}">Following</a><span>${numFollowing}</span></li>
                             `;
 
     let subheadForm = document.createElement('form');
@@ -183,10 +184,15 @@
                                   <option value='css'>Language: CSS</option>
                                   <option value='js'>Language: JavaScript</option>
                                   `;
-    let newRepoBtn = document.createElement('button');
-    newRepoBtn.setAttribute('class', 'newRepoBtn octicon octicon-repo btn btn-success form-control');
+    let newRepoBtn = document.createElement('div');
+    let newRepoIcon = document.createElement('span');
+    let newRepoTxt = document.createElement('span');
+    newRepoBtn.setAttribute('class', 'newRepoBtn btn btn-success');
+    newRepoIcon.setAttribute('class', 'octicon octicon-repo btn btn-success form-control');
+    newRepoTxt.textContent = ' New';
+    newRepoBtn.appendChild(newRepoIcon);
+    newRepoBtn.appendChild(newRepoTxt);
     subheadForm.appendChild(newRepoBtn);
-    newRepoBtn.textContent = ' New';
 
   }
 
@@ -199,7 +205,7 @@
 
     let repoTitle = document.createElement('h3');
     repoTitle.setAttribute('class', 'repoTitle');
-    repoTitle.innerHTML = '<a href="' + link + '">' + name + '</a>';
+    repoTitle.innerHTML = `<a href="${link}">${name}</a>`;
     repoBox.appendChild(repoTitle);
 
     let repoDesc = document.createElement('p');
@@ -207,14 +213,30 @@
     repoDesc.textContent = desc;
     repoBox.appendChild(repoDesc);
 
-    let repoLang = document.createElement('div');
-    repoLang.setAttribute('class', 'repoLang');
+    let repoLangDiv = document.createElement('div');
+    let repoColor = document.createElement('span');
+    let repoLang = document.createElement('span');
+    repoLangDiv.setAttribute('class', 'repoLangDiv');
+    repoBox.appendChild(repoLangDiv);
+
+    repoColor.setAttribute('class', 'repoColor');
     lang = lang.toLowerCase();
-    repoLang.innerHTML = '<a href="#">' + lang + '</a>';
-    repoBox.appendChild(repoLang);
+    if (lang === 'html') {
+      repoColor.style.backgroundColor = '#e34c26';
+    } else if (lang === 'css') {
+      repoColor.style.backgroundColor = '#563d7c'
+    } else if (lang === 'javascript') {
+      repoColor.style.backgroundColor = '#f1e05a'
+    };
+
+    repoLang.innerHTML = `<a href="#">${lang}</a>`;
+    repoLangDiv.appendChild(repoColor);
+    repoLangDiv.appendChild(repoLang);
+
 
     let repoUpdate = document.createElement('p');
     repoUpdate.setAttribute('class', 'repoUpdate');
+    updated = moment(updated, moment.ISO_8601).fromNow();
     repoUpdate.textContent = updated;
     repoBox.appendChild(repoUpdate);
 

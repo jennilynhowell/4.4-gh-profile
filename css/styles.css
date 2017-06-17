@@ -2,6 +2,13 @@ body {
   padding-top: 70px;
 }
 
+a {
+  color: #0366d6;
+}
+
+p {
+  color: #586069
+}
 
 .navbar {
   background-color: #24292E;
@@ -49,26 +56,122 @@ body {
 }
 
 #photoDiv {
-  height: 20%;
   width: 100%;
+}
+
+.nameDiv {
+  margin-top: 170px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.locDiv {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaecef;
+}
+
+.locDiv p {
+  display: inline;
+  padding-left: 8px;
+}
+
+.webDiv {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.orgsDiv h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subheadList {
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+.subheadList.list-inline li {
+  padding: 0px 20px 20px 20px;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+}
+
+.subheadList.list-inline li:hover{
+  border-bottom-color: #e36209;
+}
+
+.subheadList a {
+  color: #586069;
+}
+
+.subheadList span {
+  margin-left: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: #EDEDEE;
 }
 
 .subheadForm {
   border-bottom: 1px solid #E1E4E8;
-  padding: 5%;
+  padding-left: 20px;
 }
 
-#subheadSearchField {
-  width: 25%;
+.form-inline .form-control[type='search']{
+  width: 200px;
+  margin: 0px 20px 20px 0px;
+}
+
+.subheadForm select {
+  width: 100px;
+  margin: 0px 20px 20px 0px;
+}
+
+.newRepoBtn {
+  padding: 0px 8px;
+  margin: 0px 20px 20px 0px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.octicon-repo {
+  padding: 0;
+  padding-top: 8px;
+}
+
+.newRepoTxt p {
+  display: inline;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  color: #fff;
 }
 
 .repoBox {
+  padding: 24px, 0px, 24px, 0px;
   border-bottom: 1px solid #E1E4E8;
 }
 
-.repoTitle {
-  color: #035EC4;
+.repoLangDiv {
+  margin: 10px 0px;
 }
+
+.repoColor {
+  display: inline-block;
+  margin-right: 10px;
+  width: 12px;
+  height: 12px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+
+
+
+
 
 /*#photoDiv img {
   width: 100%;
