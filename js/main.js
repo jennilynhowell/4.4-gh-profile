@@ -81,10 +81,10 @@
   function buildSidebar(name, bio, loc, email, photo, web) {
 
     let photoDiv = document.createElement('div');
-    photoDiv.setAttribute('class', 'photoDiv col-md-3');
+    photoDiv.setAttribute('class', 'photoDiv');
     photoDiv.setAttribute('id', 'photoDiv');
     sidebarNode.appendChild(photoDiv);
-    photoDiv.innerHTML = '<img class="img-rounded img-responsive" src="' + photo + '">';
+    photoDiv.innerHTML = '<img class="img-rounded img-responsive large-photo" src="' + photo + '">';
 
     let nameDiv = document.createElement('h3');
     nameDiv.setAttribute('class', 'nameDiv');
