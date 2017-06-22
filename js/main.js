@@ -35,7 +35,7 @@
           let name = data.name;
           let bio = data.bio;
           let loc = data.location;
-          let email = data.email;
+          let email = 'jennilynhowell@me.com';
           let photo = data.avatar_url;
           let web = data.html_url;
 
